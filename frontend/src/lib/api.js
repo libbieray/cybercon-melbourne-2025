@@ -1,6 +1,6 @@
 // API client configuration for Cybercon Melbourne 2025 Speaker Portal
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://cybercon-melbourne-2025.onrender.com';
 const API_TIMEOUT = parseInt(import.meta.env.VITE_API_TIMEOUT) || 30000;
 
 class ApiClient {
