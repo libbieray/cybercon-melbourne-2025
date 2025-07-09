@@ -59,9 +59,6 @@ def create_app():
     # Enable CORS for all origins (required for frontend-backend communication)
     CORS(app, origins="*", supports_credentials=True)
     
-    # Initialize security headers
-    SecurityHeaders(app)
-    
     # Register blueprints
     app.register_blueprint(user_bp, url_prefix='/api')
     app.register_blueprint(auth_bp, url_prefix='/api/auth')
