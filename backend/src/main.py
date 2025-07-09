@@ -151,7 +151,6 @@ def init_database(app):
                 is_active=True,
                 email_verified=True
             )
-            admin_user.set_password('CyberconAdmin2025!')
             admin_user.roles.append(admin_role)
             
             db.session.add(admin_user)
