@@ -276,15 +276,3 @@ const Layout = () => {
 }
 
 export default Layout;
-
-  </div>  // ← ADD THIS EXTRA CLOSING DIV
-);
-}
-
-export default Layout;
-
-  );
-}
-
-export default Layout;
-
