@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: cybercon-2025-backend
+    env: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: python src/main.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: FLASK_ENV
+        value: production
+      - key: DEBUG
+        value: false
+      - key: PORT
+        value: 5000
+      - key: HOST
+        value: 0.0.0.0
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: ENCRYPTION_KEY
+        generateValue: true
+      - key: SESSION_SECRET
+        generateValue: true
+    healthCheckPath: /api/health
+    
+  - type: pserv
+    name: cybercon-2025-database
+    plan: starter
+    databaseName: cybercon_speaker_db
+    databaseUser: cybercon_user
+    ipAllowList: []
+
