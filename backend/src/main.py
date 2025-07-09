@@ -173,21 +173,21 @@ def init_database(app):
             print("✓ Default session types created")
         
         # Check if rooms exist
-        if not Room.query.first():
-            rooms = [
-                Room(name='Main Auditorium', capacity=500, location='Level 1', 
-                     equipment='Projector, Audio System, Live Streaming'),
-                Room(name='Conference Room A', capacity=100, location='Level 2', 
-                     equipment='Projector, Audio System'),
-                Room(name='Conference Room B', capacity=100, location='Level 2', 
-                     equipment='Projector, Audio System'),
-                Room(name='Workshop Space', capacity=50, location='Level 3', 
-                     equipment='Interactive Whiteboards, Breakout Areas')
-            ]
-            
-            db.session.add_all(rooms)
-            db.session.commit()
-            print("✓ Default rooms created")
+        #if not Room.query.first():
+        #    rooms = [
+        #       Room(name='Main Auditorium', capacity=500, location='Level 1', 
+        #             equipment='Projector, Audio System, Live Streaming'),
+        #        Room(name='Conference Room A', capacity=100, location='Level 2', 
+        #             equipment='Projector, Audio System'),
+        #        Room(name='Conference Room B', capacity=100, location='Level 2', 
+        #             equipment='Projector, Audio System'),
+        #        Room(name='Workshop Space', capacity=50, location='Level 3', 
+        #             equipment='Interactive Whiteboards, Breakout Areas')
+        #    ]
+        #    
+        #    db.session.add_all(rooms)
+        #    db.session.commit()
+        #    print("✓ Default rooms created")
         
         print("✓ Database initialization complete")
 
