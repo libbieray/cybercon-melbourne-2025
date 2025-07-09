@@ -5,6 +5,7 @@ import path from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: './',  // Add this line to fix asset paths
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -24,7 +25,7 @@ export default defineConfig({
     strictPort: false,
   },
   build: {
-    outDir: 'dist',
+    outDir: 'build',  // Change this from 'dist' to 'build'
     sourcemap: false,
     minify: 'terser',
     target: 'es2015',
@@ -55,4 +56,3 @@ export default defineConfig({
     ],
   },
 })
-
