@@ -151,7 +151,7 @@ def init_database(app):
                 is_active=True,
                 email_verified=True
             )
-            admin_user.roles.append(admin_role)
+        admin_user.roles.append(admin_role)
         
             db.session.add(admin_user)
             db.session.commit()
