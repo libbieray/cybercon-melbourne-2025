@@ -271,6 +271,18 @@ const Layout = () => {
         </div>
       </main>
     </div>
+  </div>
+);
+}
+
+export default Layout;
+
+  </div>  // ← ADD THIS EXTRA CLOSING DIV
+);
+}
+
+export default Layout;
+
   );
 }
 
