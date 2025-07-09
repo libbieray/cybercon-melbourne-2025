@@ -6,7 +6,7 @@ Flask-JWT-Extended==4.5.3
 Flask-CORS==4.0.0
 
 # Database
-SQLAlchemy==2.0.23
+SQLAlchemy==2.0.25
 psycopg2-binary==2.9.7
 
 # Security and authentication
