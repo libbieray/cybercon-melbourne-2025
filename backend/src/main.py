@@ -141,7 +141,7 @@ def init_database(app):
         # Check if admin user exists
         if not User.query.filter_by(email='admin@cybercon2025.com').first():
             admin_role = Role.query.filter_by(name='Admin').first()
-        admin_user = User(
+            admin_user = User(
                 email='admin@cybercon2025.com',
                 password='CyberconAdmin2025!',
                 first_name='System',
@@ -151,7 +151,7 @@ def init_database(app):
                 is_active=True,
                 email_verified=True
             )
-        admin_user.roles.append(admin_role)
+            admin_user.roles.append(admin_role)
         
             db.session.add(admin_user)
             db.session.commit()
