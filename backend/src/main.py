@@ -54,6 +54,7 @@ def create_app():
     
     # Initialize extensions
     db.init_app(app)
+    print(f"--- Configuring JWT with key: {app.config.get('JWT_SECRET_KEY')} ---")
     jwt.init_app(app)
     migrate = Migrate(app, db)
     
