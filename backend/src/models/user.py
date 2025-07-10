@@ -1,9 +1,11 @@
+from flask_jwt_extended import JWTManager
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime
 import secrets
 
 db = SQLAlchemy()
+jwt = JWTManager()
 
 # Association table for many-to-many relationship between users and roles
 user_roles = db.Table('user_roles',
