@@ -15,6 +15,7 @@ auth_bp = Blueprint('auth', __name__)
 
 # JWT Configuration
 jwt = JWTManager()
+print("--- Creating JWTManager instance in auth.py ---")
 
 # Token blacklist for logout functionality
 blacklisted_tokens = set()
