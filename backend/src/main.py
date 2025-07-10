@@ -25,6 +25,7 @@ def create_app():
     # Production configuration
     app.config['SECRET_KEY'] = os.environ.get('SESSION_SECRET', 'dev-secret-key-change-in-production')
     app.config['JWT_SECRET_KEY'] = 'this-is-a-super-secret-key-for-testing'
+print(f"--- JWT SECRET KEY USED: {app.config['JWT_SECRET_KEY']} ---")
     
     # Database configuration for Render
     database_url = os.environ.get('DATABASE_URL')
