@@ -1,4 +1,5 @@
 import os
+from sqlalchemy import text
 import sys
 # DON'T CHANGE: Add the src directory to the Python path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
