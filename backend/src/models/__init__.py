@@ -7,6 +7,7 @@ from src.models.presentation import Presentation, PresentationFile
 from src.models.review import Review, ReviewComment, ReviewAssignment
 from src.models.schedule import TimeSlot, PresentationSchedule, ScheduleConflict
 from src.models.session import SessionType, Session, SessionSpeaker, SessionFile
+from flask_jwt_extended import JWTManager
 from src.models.communication import (
     SessionQuestion, SessionQuestionResponse, FAQ, BroadcastMessage, 
     MessageDelivery, ApproverInvitation
