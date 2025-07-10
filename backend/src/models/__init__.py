@@ -2,7 +2,7 @@
 Database models for the Cybercon Melbourne 2025 Speaker Presentation Management System
 """
 
-from src.models.user import db, User, Role, AuditLog, user_roles
+from src.models.user import db, User, Role, AuditLog, user_roles, jwt
 from src.models.presentation import Presentation, PresentationFile
 from src.models.review import Review, ReviewComment, ReviewAssignment
 from src.models.schedule import TimeSlot, PresentationSchedule, ScheduleConflict
@@ -23,6 +23,7 @@ from src.models.notification import (
 # Export all models for easy importing
 __all__ = [
     'db',
+    'jwt'
     'User',
     'Role', 
     'AuditLog',
