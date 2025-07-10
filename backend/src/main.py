@@ -73,7 +73,7 @@ def create_app():
     def health_check():
         try:
             # Test database connection
-            db.session.execute('SELECT 1')
+            db.session.execute(text('SELECT 1'))
             return {'status': 'healthy', 'database': 'connected'}, 200
         except Exception as e:
             return {'status': 'unhealthy', 'error': str(e)}, 500
