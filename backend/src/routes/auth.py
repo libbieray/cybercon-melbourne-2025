@@ -9,7 +9,7 @@ import base64
 import secrets
 import re
 
-from src.models import db, User, Role, AuditLog
+from src.models import db, User, Role, AuditLog, jwt
 
 auth_bp = Blueprint('auth', __name__)
 
